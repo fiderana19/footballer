@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+$primary-color : #4B4345;
+$second-color: #556DAC;
+$third-color: #F79B77;
+.home{
+    background: url('../image/bg.jpg') no-repeat;
+    background-size: cover;
+}
+/*the header*/
+.header-content{
+    padding: 10px 10%;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 800px){
+        padding: 10px 5%;
+    }
+    
+    /*the header logo*/
+    .header-logo {
+        img {
+            width: 70px;
+        }
+    }
+    /*the navigation*/
+    .navigation {
+        list-style-type: none;
+        display: flex;
+        li {
+            padding: 5px 10px 0px;
+            a {
+                color: white;
+                font-family: 'Berlin Sans FB';
+                font-size: 20px;
+                &:hover {
+                    color: $second-color;
+                    text-decoration: none;
+                    transition: 300ms;
+                }
+            }
+        } 
+        @media screen and (max-width: 680px){
+            display: none;
+        }       
+    }
+    button{
+        display: none;
+        height: 40px;
+        background: $second-color;
+        @media screen and (max-width: 680px){
+            display: block;
+        }    
+        &:hover{
+            background: white;
+            color: $second-color;
+            border: 1px solid $second-color;
+        }
+    }
+    .modal-dialog{
+        .modal-content{
+            padding: 25px;
+            ul{
+                list-style-type: none;
+                li{
+                    a{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+/*the home content*/
+.home-content {
+    padding: 100px 10% 0;
+    height: 100vh;
+    @media screen and (max-width: 680px){
+        padding-top: 25px;
+    }  
+    .home-content-text{
+        color: white;
+        margin-top: 200px;
+        @media screen and (max-width: 1000px){
+            margin-top: 100px;        
+        }  
+        
+        h1{
+            font-family: 'Lucida Sans';
+            color: $second-color;
+            animation: anim 2s;
+        }
+        h2{
+            font-family: 'Berlin Sans FB Demi';
+            font-size: 22px;
+            animation: anim 3s;
+        }
+        h3{
+            font-family: 'Lucida Sans';
+            font-size: 20px;
+            animation: anim 4s;
+        }
+    }
+}
+/*the social media lik in home*/
+.home-content-social{
+    animation: anim1 3s;
+    a{
+        color: $third-color;
+        font-size: 25px;
+        margin: 0 15px;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+/*the history section*/
+.histoire {
+    padding: 100px 10%;
+    display: flex;
+    @media screen and (max-width: 730px){
+        display: block;
+        text-align: center;
+    }    
+    img{
+        width: 300px;  
+        @media screen and (max-width: 730px){
+            width: 100%;
+        }     
+    }
+    .histoire-text{
+        margin-left: 50px;
+        @media screen and (max-width: 730px){
+            margin-left: 0;        
+        }  
+        p h1{
+            color: $second-color;
+        }
+    }
+}
+/*the negociation section*/
+.negocier {
+    background: $second-color;
+    text-align: center;
+    padding: 50px 10%;
+    h1{
+        color: white;
+        margin: 25px 0;
+        @media screen and (max-width: 260px){
+            font-size: 18px;        
+        }  
+    }
+    .negocier-btn{
+        display: flex;
+        justify-content: space-around;
+        @media screen and (max-width: 500px){
+            display: block;
+        }    
+        button{
+            background: $third-color;
+            color: white;
+            @media screen and (max-width: 500px){
+                margin: 5px 0;
+            }    
+            &:hover {
+                border: 1px solid $third-color  ;
+                background: white;
+                color: $third-color;
+            }
+        }
+    }
+}
+/*the parcours section*/
+.parcours {
+    padding: 100px 10%;
+    .parcours-title {
+        text-align: center;
+        margin: 25px 0;
+        color: $second-color;
+    }
+    .parcours-content{
+        display: grid;
+        justify-content: center;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fill , minmax(270px ,300px) );
+        @media screen and (max-width: 370px){
+            grid-template-columns: repeat(auto-fill , minmax(80%,90%));
+        }  
+        .parcours-content-item{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 300px;
+            color: black;
+            @media screen and (max-width: 370px){
+                width: 100%;
+            }  
+            &:hover{
+                transform: scale(1.05);
+                transition:700ms;
+            }
+            img{
+                border-radius: 10px;
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+            .parcours-content-item-text{
+                padding: 15px ;
+            }
+        }
+    }
+}
+/*the map*/
+.map {
+    img{
+        width:100%;
+    }
+    h2 {
+        color: black;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 25px;
+        @media screen and (max-width: 300px){
+            font-size: 16px;        
+        }  
+    }
+}
+/*contact*/
+.contact {
+    background: url('../image/contact.jpg') no-repeat;
+    background-size: cover;
+    border: 2px solid $second-color;
+    text-align: center;
+    margin: 100px 10%;
+    padding: 50px;
+    @media screen and (max-width: 370px){
+        padding: 50px 8px;
+    }  
+    h1{
+        @media screen and (max-width: 330px){
+            font-size: 22px;
+        }  
+    }
+    form{
+        display: grid;
+        justify-content: center;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill , minmax(400px,440px));
+        @media screen and (max-width: 550px){
+            grid-template-columns: repeat(auto-fill , minmax(90%,100%));
+        }    
+        #inputt {
+            height: 40px;
+            margin-top: 25px;
+            padding-left: 25px;
+        }
+    }
+}
+/*the footer*/
+.footer {
+    background: $third-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+    @media screen and (max-width: 530px){
+        display: block;
+    }    
+    .footer-pub{
+        width: 40%;
+        @media screen and (max-width: 530px){
+            width: 100%;
+        }    
+        input{
+            width: 50%;
+            height: 35px;
+            padding-left: 8px;
+            @media screen and (max-width: 530px){
+                width: 70%;
+            } 
+            @media screen and (max-width: 360px){
+                width: 100%;
+            } 
+        }
+        button{
+            @media screen and (max-width: 360px){
+                margin: 10px 0;
+            } 
+        }
+    }
+    .footer-nav {
+        list-style-type: none;
+        @media screen and (max-width: 530px){
+            text-align: center;
+        }    
+        li{
+            a{
+                color: black;
+                &:hover{
+                    color: $second-color;
+                }
+            }
+        }
+    }
+    .footer-bio{
+        width: 30%;
+        @media screen and (max-width: 530px){
+            width: 100%;
+        }    
+        .footer-bio-social{
+            a{
+                color: $second-color;
+                font-size: 25px;
+                margin: 0 15px;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes anim {
+    from{
+        transform: scaleX(-100);
+        opacity: 0;
+    }
+    to{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+@keyframes anim1 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
